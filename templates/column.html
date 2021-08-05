@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>网站信息</title>  
+    <link rel="stylesheet" href="css/pintuer4.css">
+    <link rel="stylesheet" href="css/admin4.css">
+    <script src="js/jquery4.js"></script>
+    <script src="js/pintuer4.js"></script>  
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+  <div class="padding border-bottom">  
+  <a class="button border-yellow" href=""><span class="icon-plus-square-o"></span> 添加内容</a>
+  </div> 
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="5%">ID</th>     
+      <th>书名</th>  
+      <th>价格（元）</th>     
+      <th width="250">操作</th>
+    </tr>
+   
+    <tr>
+      <td>17</td>      
+      <td>书目1</td>  
+      <td>1</td>      
+      <td>
+      <div class="button-group">
+      <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
+       <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
+      </div>
+      </td>
+    </tr> 
+    
+    <tr>
+      <td>17</td>      
+      <td>书目2</td>  
+      <td>1</td>      
+      <td>
+      <div class="button-group">
+      <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
+       <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
+      </div>
+      </td>
+    </tr>  
+    
+    <tr>
+      <td>17</td>      
+      <td>书目3</td>  
+      <td>1</td>      
+      <td>
+      <div class="button-group">
+      <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
+       <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
+      </div>
+      </td>
+    </tr>  
+    
+    <tr>
+      <td>17</td>      
+      <td>书目4</td>  
+      <td>1</td>      
+      <td>
+      <div class="button-group">
+      <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
+       <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
+      </div>
+      </td>
+    </tr>  
+    
+    <tr>
+      <td>17</td>      
+      <td>书目5</td>  
+      <td>1</td>      
+      <td>
+      <div class="button-group">
+      <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
+       <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
+      </div>
+      </td>
+    </tr>   
+    
+  </table>
+</div>
+<script>
+function del(id){
+	if(confirm("您确定要删除吗?")){
+		
+	}
+}
+</script>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">   
+      <input type="hidden" name="id"  value="" />  
+		<div class="form-group">
+        <div class="label">
+          <label>ID：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="sort" value="0"  data-validate="required:,number:ID必须为数字" />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>书名：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="title" value="" data-validate="required:请输入书名" />         
+          <div class="tips"></div>
+        </div>
+      </div> 
+      <div class="form-group">
+        <div class="label">
+          <label>封面图片：</label>
+        </div>
+        <div class="field">
+          <input type="text" id="url1" name="banner" class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" />
+          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;">
+          <div class="tipss">图片尺寸：1920*200</div>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="label">
+          <label>价格：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="price" value="" />         
+          <div class="tips"></div>
+        </div>
+      </div>       
+      <div class="form-group">
+        <div class="label">
+          <label>标签：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="lable" value="" />         
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>书籍描述：</label>
+        </div>
+        <div class="field">
+          <textarea type="text" class="input" name="desc" style="height:100px;" ></textarea>        
+        </div>
+     </div>
+ 
+     <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body></html>

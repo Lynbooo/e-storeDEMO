@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物车一：`table`标签</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 70%;
+        margin: auto;
+        text-align: center;
+      }
+      table caption {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      table thead th {
+        height: 30px;
+        background-color: lightblue;
+      }
+      table tbody tr {
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+      }
+      table tfoot {
+        color: coral;
+      }
+      table tfoot td:first-of-type {
+        text-align: right;
+      }
+      div {
+        width: 70%;
+        margin: 10px auto;
+      }
+      div button {
+        float: right;
+        border: none;
+        width: 100px;
+        height: 50px;
+      }
+      div button:hover {
+        background-color: rgb(49, 99, 235);
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        购物车
+      </caption>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>名称</th>
+          <th>单价</th>
+          <th>数量</th>
+          <th>总价</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>《Python编程 从入门到实践》</td>
+          <td>66.7</td>
+          <td>1</td>
+          <td>66.7</td>
+        </tr>
+        
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">总计：</td>
+          <td>1</td>
+          <td>66.7</td>
+        </tr>
+      </tfoot>
+    </table>
+    <div>
+      <button>结算</button>
+    </div>
+  </body>
+</html>
